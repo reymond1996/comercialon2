@@ -41,6 +41,7 @@
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.mskCpf = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtUf = new System.Windows.Forms.TextBox();
@@ -60,10 +61,10 @@
             this.txtLogradouro = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnEditarAlterar = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.ListarID = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -198,6 +199,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Identificação";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(78, 33);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(63, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "...";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox2
             // 
@@ -377,16 +388,6 @@
             this.cmbTipo.Size = new System.Drawing.Size(121, 21);
             this.cmbTipo.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(78, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(63, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnEditarAlterar
             // 
             this.btnEditarAlterar.Location = new System.Drawing.Point(111, 179);
@@ -405,6 +406,7 @@
             this.btnListar.TabIndex = 3;
             this.btnListar.Text = "&Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // btnCancelar
             // 
@@ -415,11 +417,21 @@
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
+            // ListarID
+            // 
+            this.ListarID.FormattingEnabled = true;
+            this.ListarID.Location = new System.Drawing.Point(12, 254);
+            this.ListarID.Name = "ListarID";
+            this.ListarID.Size = new System.Drawing.Size(351, 134);
+            this.ListarID.TabIndex = 7;
+            this.ListarID.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ListarID);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCancelar);
@@ -475,6 +487,7 @@
         private System.Windows.Forms.Button btnEditarAlterar;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.ListBox ListarID;
     }
 }
 

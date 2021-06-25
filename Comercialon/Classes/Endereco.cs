@@ -51,8 +51,7 @@ namespace Comercialon.Classes
         }
         public void Inserir(int idCliente) 
         {
-            string query = "insert enderecos values(" +
-                idCliente+", " +
+            string query = "insert enderecos values(0," +
                 "'"+Cep+"', " +
                 "'"+Logradouro+"'," +
                 "'"+Numero+"', " +
@@ -61,7 +60,8 @@ namespace Comercialon.Classes
                 "'"+Cidade+"'," +
                 "'"+Estado+"'," +
                 "'"+SiglaEstado+"'," +
-                "'"+Tipo+"')";
+                "'"+Tipo+"'," +
+                idCliente+")";
             var cmd = Banco.Abrir();
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.CommandText = query;
