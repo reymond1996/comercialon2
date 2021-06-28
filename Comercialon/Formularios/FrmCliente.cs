@@ -152,7 +152,6 @@ namespace Comercialon
             {
                 MessageBox.Show("Cliente alterado com sucesso!");
                 LimpaCampos();
-                btnListar_Click(sender, e);
             }
             else
             {
@@ -163,18 +162,7 @@ namespace Comercialon
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-            dgvClientes.Rows.Clear();
-            var lista = Cliente.ListarTodos();
-            foreach (var item in lista)
-            {
-                dgvClientes.Rows.Add();
-                dgvClientes.Rows[dgvClientes.Rows.Count-1].Cells[0].Value = item.Id;
-                dgvClientes.Rows[dgvClientes.Rows.Count - 1].Cells[1].Value = item.Nome;
-                dgvClientes.Rows[dgvClientes.Rows.Count - 1].Cells[2].Value = item.Cpf;
-                dgvClientes.Rows[dgvClientes.Rows.Count - 1].Cells[3].Value = item.Email;
-                dgvClientes.Rows[dgvClientes.Rows.Count - 1].Cells[4].Value = item.Telefone;
-                dgvClientes.Rows[dgvClientes.Rows.Count - 1].Cells[5].Value = item.Ativo;
-            }
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
