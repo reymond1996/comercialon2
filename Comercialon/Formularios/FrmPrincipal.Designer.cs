@@ -41,6 +41,8 @@
             this.tsmConfiguracoes = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAjuda = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,18 +90,21 @@
             // tsmCadastrosProdutosNovo
             // 
             this.tsmCadastrosProdutosNovo.Name = "tsmCadastrosProdutosNovo";
-            this.tsmCadastrosProdutosNovo.Size = new System.Drawing.Size(180, 22);
+            this.tsmCadastrosProdutosNovo.Size = new System.Drawing.Size(103, 22);
             this.tsmCadastrosProdutosNovo.Text = "&Novo";
             this.tsmCadastrosProdutosNovo.Click += new System.EventHandler(this.tsmCadastrosProdutosNovo_Click);
             // 
             // tsmCadastrosProdutosLista
             // 
             this.tsmCadastrosProdutosLista.Name = "tsmCadastrosProdutosLista";
-            this.tsmCadastrosProdutosLista.Size = new System.Drawing.Size(180, 22);
+            this.tsmCadastrosProdutosLista.Size = new System.Drawing.Size(103, 22);
             this.tsmCadastrosProdutosLista.Text = "&Lista";
             // 
             // tsmCadastrosUsuarios
             // 
+            this.tsmCadastrosUsuarios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novoToolStripMenuItem,
+            this.listarToolStripMenuItem});
             this.tsmCadastrosUsuarios.Name = "tsmCadastrosUsuarios";
             this.tsmCadastrosUsuarios.Size = new System.Drawing.Size(180, 22);
             this.tsmCadastrosUsuarios.Text = "&Ususários";
@@ -142,6 +147,18 @@
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // novoToolStripMenuItem
+            // 
+            this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.novoToolStripMenuItem.Text = "Novo";
+            // 
+            // listarToolStripMenuItem
+            // 
+            this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listarToolStripMenuItem.Text = "Listar";
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,5 +193,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmCadastrosProdutosNovo;
         private System.Windows.Forms.ToolStripMenuItem tsmCadastrosProdutosLista;
         private System.Windows.Forms.ToolStripMenuItem tsmCadastrosUsuarios;
+        private System.Windows.Forms.ToolStripMenuItem novoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem;
     }
 }

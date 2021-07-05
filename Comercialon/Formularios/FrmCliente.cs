@@ -36,7 +36,7 @@ namespace Comercialon
             Endereco endereco = new Endereco
                 (txtLogradouro.Text, txtNumero.Text, txtComplemento.Text
                 , txtCep.Text, txtBairro.Text, txtCidade.Text, cmbTipo.Text,
-                txtEstado.Text, txtUf.Text);
+                 txtUf.Text);
             endereco.Inserir(cliente.Id);
             txtID.Text = cliente.Id.ToString();
             MessageBox.Show("Cliente " + cliente.Id + " inserido.");
@@ -168,7 +168,7 @@ namespace Comercialon
             foreach (var item in lista)
             {
                 dgvClientes.Rows.Add();
-                dgvClientes.Rows[dgvClientes.Rows.Count-1].Cells[0].Value = item.Id;
+                dgvClientes.Rows[dgvClientes.Rows.Count - 1].Cells[0].Value = item.Id;
                 dgvClientes.Rows[dgvClientes.Rows.Count - 1].Cells[1].Value = item.Nome;
                 dgvClientes.Rows[dgvClientes.Rows.Count - 1].Cells[2].Value = item.Cpf;
                 dgvClientes.Rows[dgvClientes.Rows.Count - 1].Cells[3].Value = item.Email;
@@ -180,6 +180,34 @@ namespace Comercialon
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvEndereco.Rows.Clear(); //limpar o datagrid
+            int IdCli = Convert.ToInt32(dgvClientes.Rows[e.RowIndex].Cells[0].Value);
+            var listaEnd = Endereco.ListaEnderecos(IdCli);
+            if (listaEnd.Count>0)
+            {
+                foreach (var item in listaEnd)
+                {
+                    dgvEndereco.Rows.Add();
+                    dgvEndereco.Rows[dgvEndereco.Rows.Count - 1].Cells[0].Value = item.Tipo;
+                    dgvEndereco.Rows[dgvEndereco.Rows.Count - 1].Cells[1].Value = item.Cep;
+                    StringBuilder endereco = new StringBuilder();
+                    endereco.Append(item.Logradouro);
+                    endereco.Append(", " + item.Numero);
+                    endereco.Append(", " + item.Bairro);
+                    dgvEndereco.Rows[dgvEndereco.Rows.Count - 1].Cells[2].Value = endereco;
+                }
+            }
+            else
+            {
+                dgvEndereco.Rows.Add();
+                string mensagem = " não há endereço cadastrados";
+                dgvEndereco.Rows[dgvEndereco.Rows.Count - 1].Cells[2].Value = mensagem;
+            }
+           
         }
     }
 }
