@@ -39,13 +39,13 @@
             this.txtCat = new System.Windows.Forms.TextBox();
             this.btnCategoria = new System.Windows.Forms.Button();
             this.dgvListarCategoria = new System.Windows.Forms.DataGridView();
+            this._idCat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._nomeCat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._siglaCat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvListarMarca = new System.Windows.Forms.DataGridView();
             this._IdMarcas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._NomeMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._siglaMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._idCat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._nomeCat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._siglaCat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarCategoria)).BeginInit();
@@ -144,6 +144,7 @@
             this.btnCategoria.TabIndex = 0;
             this.btnCategoria.Text = "InserirC";
             this.btnCategoria.UseVisualStyleBackColor = true;
+            this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
             // 
             // dgvListarCategoria
             // 
@@ -156,6 +157,28 @@
             this.dgvListarCategoria.Name = "dgvListarCategoria";
             this.dgvListarCategoria.Size = new System.Drawing.Size(421, 136);
             this.dgvListarCategoria.TabIndex = 3;
+            // 
+            // _idCat
+            // 
+            this._idCat.Frozen = true;
+            this._idCat.HeaderText = "ID";
+            this._idCat.Name = "_idCat";
+            this._idCat.ReadOnly = true;
+            // 
+            // _nomeCat
+            // 
+            this._nomeCat.Frozen = true;
+            this._nomeCat.HeaderText = "Nome";
+            this._nomeCat.Name = "_nomeCat";
+            this._nomeCat.ReadOnly = true;
+            this._nomeCat.Width = 180;
+            // 
+            // _siglaCat
+            // 
+            this._siglaCat.Frozen = true;
+            this._siglaCat.HeaderText = "Sigla";
+            this._siglaCat.Name = "_siglaCat";
+            this._siglaCat.ReadOnly = true;
             // 
             // dgvListarMarca
             // 
@@ -190,28 +213,6 @@
             this._siglaMarca.Frozen = true;
             this._siglaMarca.HeaderText = "Sigla";
             this._siglaMarca.Name = "_siglaMarca";
-            // 
-            // _idCat
-            // 
-            this._idCat.Frozen = true;
-            this._idCat.HeaderText = "ID";
-            this._idCat.Name = "_idCat";
-            this._idCat.ReadOnly = true;
-            // 
-            // _nomeCat
-            // 
-            this._nomeCat.Frozen = true;
-            this._nomeCat.HeaderText = "Nome";
-            this._nomeCat.Name = "_nomeCat";
-            this._nomeCat.ReadOnly = true;
-            this._nomeCat.Width = 180;
-            // 
-            // _siglaCat
-            // 
-            this._siglaCat.Frozen = true;
-            this._siglaCat.HeaderText = "Sigla";
-            this._siglaCat.Name = "_siglaCat";
-            this._siglaCat.ReadOnly = true;
             // 
             // FrmProdutos
             // 

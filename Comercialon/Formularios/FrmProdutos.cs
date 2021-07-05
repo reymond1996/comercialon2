@@ -50,5 +50,14 @@ namespace Comercialon.Formularios
                 dgvListarMarca.Rows[dgvListarMarca.Rows.Count - 1].Cells[2].Value = item.Sigla;
             }
         }
+
+        private void btnCategoria_Click(object sender, EventArgs e)
+        {
+            Categorias categorias = new Categorias(
+                txtCat.Text,
+                txtSiglaCat.Text
+                );
+            categorias.Inserir();
+        }
     }
 }
